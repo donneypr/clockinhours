@@ -121,3 +121,20 @@ def login_and_bypass_verification(driver, website_url, myusername, mypassword, m
 
     except Exception as e:
         print(f"An error occurred during the login and verification process: {e}")
+
+
+def clockInHours():
+    absence_time = wait.until(
+        EC.element_to_be_clickable((By.ID, "PTNUI_LAND_REC_GROUPLET_LBL$1"))
+    )
+    absence_time.click()
+
+    enter_time = wait.until(
+        EC.elememt_to_be_clickable((By.ID, "PTNUI_LAND_REC_GROUPLET_LBL$1"))
+    )
+    enter_time.click()
+
+    ##have logic to ensure that it is on the page of the right week and clock in the hours for the right day
+
+    
+
