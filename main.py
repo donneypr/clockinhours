@@ -40,5 +40,18 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 def open_broswer(driver, website):
     driver.get(website)
 
-open_broswer(driver, w2work)
+def log_into_w2w(driver, website):
+    
+    when2workusername = driver.find_element(By.NAME, 'UserId1')
+    when2workusername.send_keys(myusername);
 
+    when2workpassword = driver.find_element(By.NAME, 'Password1')
+    when2workpassword.send_keys(mypassword);
+
+    loginbutton = driver.find_element(By.NAME, "Submit1")
+    loginbutton.click();
+
+
+open_broswer(driver, w2work)
+time.sleep(1)
+log_into_w2w(driver, w2work)
