@@ -55,3 +55,8 @@ def log_into_w2w(driver, website):
 open_broswer(driver, w2work)
 time.sleep(1)
 log_into_w2w(driver, w2work)
+
+'''
+notes for future me
+-use the Myshifts tab in when2work and parse through that to get your shifts
+'''
