@@ -20,7 +20,7 @@ myusername = os.getenv("USERNAME")
 mypassword = os.getenv("PASSWORD")
 mybypasscode = os.getenv("BYPASSCODE")
 
-w2work = "https://www6.whentowork.com/cgi-bin/w2wF3.dll/empschedule?SID=320330770411C&lmi="
+w2work = "https://whentowork.com/logins.htm?_ga=2.111829773.824138766.1746351388-699864049.1701384436"
 hrSelfServe = "https://hrselfserve.info.yorku.ca/"
 
 ''''''
@@ -51,12 +51,20 @@ def log_into_w2w(driver, website):
     loginbutton = driver.find_element(By.NAME, "Submit1")
     loginbutton.click();
 
+    myschedule = driver.find_element(By.ID, 'myschedule')
+    myschedule.click();
+
+    myshifts = driver.find_element(By.XPATH, '//*[@id="emptopnav"]/table/tbody/tr/td[3]/table/tbody/tr[2]/td[1]')
+    myshifts.click();
+
 
 open_broswer(driver, w2work)
 time.sleep(1)
 log_into_w2w(driver, w2work)
+time.sleep(10)
 
 '''
 notes for future me
 -use the Myshifts tab in when2work and parse through that to get your shifts
+
 '''
