@@ -93,6 +93,5 @@ time.sleep(10)
 
 '''
 notes for future me
--use the Myshifts tab in when2work and parse through that to get your shifts
-
+-seems like HRSELFSERVE opens the entertime depending on the curr time, need to check this on the server
 '''
