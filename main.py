@@ -21,7 +21,7 @@ mypassword = os.getenv("PASSWORD")
 mybypasscode = os.getenv("BYPASSCODE")
 
 w2work = "https://whentowork.com/logins.htm?_ga=2.111829773.824138766.1746351388-699864049.1701384436"
-hrSelfServe = "https://hrselfserve.info.yorku.ca/"
+hrSelfServe = "https://hrselfserve.yorku.ca/psc/HRPROD/YHRESS/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL?&ticket=ST-641614-LcMgE0UkyThC4lLNdWQa-pycas.yorku.ca&"
 
 ''''''
 #headles setting
@@ -164,12 +164,14 @@ def login_and_bypass_verification(driver, website_url, myusername, mypassword, m
      except Exception as e:
          print(f"An error occurred during the login and verification process: {e}")
 
-
+'''
 open_broswer(driver, w2work)
 time.sleep(1)
 log_into_w2w(driver, w2work)
 time.sleep(10)
-
+'''
+login_and_bypass_verification(driver,hrSelfServe, myusername, mypassword, mybypasscode)
+time.sleep(10)
 '''
 notes for future me
 -seems like HRSELFSERVE opens the entertime depending on the curr time, need to check this on the server
